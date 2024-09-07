@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import HttpClient from "../lib/client";
 import { AxiosError } from "axios";
 import PostList from "../components/post/PostList";
+import AddPostForm from "../components/post/AddPostForm";
 
 const Home = () => {
   const location = useLocation();
@@ -37,6 +38,8 @@ const Home = () => {
     <div className="bg-black min-h-screen flex justify-center min-w-full">
       <div className="flex flex-col gap-4 mt-3 w-full px-4">
         {/* <pre className="text-white">{JSON.stringify(posts, null, 2)}</pre> */}
+        <AddPostForm />
+
         <PostList posts={posts} />
 
         {/* <div className="border rounded-md border-gray-700 p-3 shadow-xl text-white">
